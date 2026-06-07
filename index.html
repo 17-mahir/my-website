@@ -3,183 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma Haven | Artisan Coffee & Pastries</title>
+    <title>CostaVibe | The Nation's Favourite Coffee Hub</title>
+    <!-- Font Awesome for sleek corporate UI icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo"><i class="fas fa-coffee"></i> Aroma Haven</a>
-            <nav class="nav-links" id="navLinks">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#menu">Menu</a>
-                <a href="#testimonials">Reviews</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Corporate Utility Bar & Navigation -->
+    <header class="main-header">
+        <div class="utility-bar">
+            <div class="container utility-flex">
+                <div class="utility-left">
+                    <a href="#sustainability">Sustainability</a>
+                    <a href="#foundation">Our Foundation</a>
+                </div>
+                <div class="utility-right">
+                    <a href="#locator"><i class="fas fa-map-marker-alt"></i> Find a Store</a>
+                    <a href="#login" class="util-login-btn">Log In</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <div class="container nav-flex">
+                <a href="#" class="brand-logo">
+                    <span class="logo-circle"><i class="fas fa-coffee"></i></span>
+                    COSTAVIBE
+                </a>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#menu" class="nav-item">Our Menu</a>
+                    <a href="#loyalty" class="nav-item">CostaVibe Club</a>
+                    <a href="#deals" class="nav-item">Deals & Offers</a>
+                    <a href="#at-home" class="nav-item">Shop At Home</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a href="#order" class="btn btn-accent btn-sm hide-mobile">Order Online</a>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Roasted Fresh. Brewed Passionately.</h1>
-            <p>Step into a world of rich aromas, handcrafted specialty coffees, and freshly baked artisanal treats made daily with love.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">Explore Menu</a>
-                <a href="#contact" class="btn btn-secondary">Book a Table</a>
+    <!-- Hero Showcase Module -->
+    <section class="hero-showcase">
+        <div class="hero-split container">
+            <div class="hero-text-content">
+                <span class="badge">New Summer Release</span>
+                <h1>Discover the Iced Velvetino</h1>
+                <p>Silky-smooth signature espresso crafted with creamy dairy alternatives, served over ice for the ultimate seasonal chill. Summer refreshment, perfected.</p>
+                <div class="hero-cta-group">
+                    <a href="#menu" class="btn btn-primary">See the Menu</a>
+                    <a href="#loyalty" class="btn btn-outline">Earn Rewards</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced Latte Coffee Showcase">
             </div>
         </div>
     </section>
 
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <span class="subheading">Our Story</span>
-                    <h2>Where Every Cup Tells a Story</h2>
-                    <p>Founded in 2018, Aroma Haven started with a simple mission: to bring sustainably sourced, ethically roasted specialty coffee to our community. We partner directly with small-batch farmers to ensure premium quality.</p>
-                    <p>Whether you need a quiet corner to crush your remote work, a warm space to catch up with old friends, or just your morning espresso shot, we’ve built the perfect haven for you.</p>
+    <!-- App Loyalty & Rewards Banner -->
+    <section id="loyalty" class="loyalty-banner">
+        <div class="container loyalty-grid">
+            <div class="loyalty-graphic">
+                <div class="mock-app-card">
+                    <div class="card-brand"><i class="fas fa-coffee"></i> Club</div>
+                    <div class="beans-counter">
+                        <span class="bean active"><i class="fas fa-seedling"></i></span>
+                        <span class="bean active"><i class="fas fa-seedling"></i></span>
+                        <span class="bean active"><i class="fas fa-seedling"></i></span>
+                        <span class="bean"><i class="fas fa-seedling"></i></span>
+                        <span class="bean"><i class="fas fa-seedling"></i></span>
+                    </div>
+                    <p class="card-status">3 Beans Earned. 7 more to a free drink!</p>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cozy cafe interior">
+            </div>
+            <div class="loyalty-info">
+                <h2>Buy 10 drinks, get 1 FREE</h2>
+                <p>Join the CostaVibe Club today to track your purchases automatically, unlock personalized treats, and trade beans for premium extras like syrups or cream over the app.</p>
+                <div class="app-badges">
+                    <a href="#" class="app-btn"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#" class="app-btn"><i class="fab fa-google-play"></i> Google Play</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="menu" class="menu section-padding">
+    <!-- Brand Campaigns & Structured Deals Section -->
+    <section id="deals" class="campaigns-section container">
+        <div class="section-title-block">
+            <h2>Good Mornings, Made Better</h2>
+            <p>Explore our limited-time structured combinations available across participating nationwide stores.</p>
+        </div>
+        
+        <div class="campaign-cards-grid">
+            <!-- Breakfast Combo Deal Box -->
+            <div class="campaign-card">
+                <div class="card-tag">Before 11:00 AM</div>
+                <div class="campaign-body">
+                    <h3>The Artisan Breakfast Deal</h3>
+                    <p class="price-point">From £7.49</p>
+                    <p>Enjoy a premium breakfast item paired with a medium handcrafted coffee and fresh juice fruit options to start your morning right.</p>
+                    <a href="#locator" class="card-link">Find Nearby Store <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Lunch Combo Deal Box -->
+            <div class="campaign-card">
+                <div class="card-tag">11:00 AM - 2:00 PM</div>
+                <div class="campaign-body">
+                    <h3>The Midday Lunch Fix</h3>
+                    <p class="price-point">From £6.49</p>
+                    <p>Pair any classic signature hot toastie or pressed item with your choice of medium hot or cold espresso beverage options.</p>
+                    <a href="#locator" class="card-link">Find Nearby Store <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Menu Filtering Grid with Nutrition Indicators -->
+    <section id="menu" class="interactive-menu-module">
         <div class="container">
-            <div class="section-header">
-                <span class="subheading">Menu Favorites</span>
-                <h2>Crafted to Perfection</h2>
+            <div class="section-title-block center">
+                <h2>Explore Our Crafted Menu</h2>
+                <p>Filter products by category to view detailed nutrition metrics and allergen breakdowns instantly.</p>
+            </div>
+
+            <!-- Menu Controls Container -->
+            <div class="menu-controls">
+                <button class="filter-chip active" data-filter="drinks">Handcrafted Drinks</button>
+                <button class="filter-chip" data-filter="food">Savory Bites</button>
+            </div>
+
+            <!-- Grid Structure for Menu Display -->
+            <div class="corporate-menu-grid" id="interactiveGrid">
+                <!-- Drink 1 -->
+                <div class="product-item-card" data-group="drinks">
+                    <div class="product-details">
+                        <div class="product-meta">
+                            <h3>Signature Flat White</h3>
+                            <span class="item-tag">Classic</span>
+                        </div>
+                        <p>Short, intense espresso shots expertly paired with velvety smooth texturized whole milk.</p>
+                        <div class="nutrition-matrix">
+                            <span class="nutri-badge">115 kcal</span>
+                            <span class="allergen-badge" title="Contains Milk">Dairy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 2 -->
+                <div class="product-item-card" data-group="drinks">
+                    <div class="product-details">
+                        <div class="product-meta">
+                            <h3>Iced Caramel Macchiato</h3>
+                            <span class="item-tag">Summer Special</span>
+                        </div>
+                        <p>Chilled espresso poured over fresh cold milk, finished with organic caramel drizzle.</p>
+                        <div class="nutrition-matrix">
+                            <span class="nutri-badge">190 kcal</span>
+                            <span class="allergen-badge">Dairy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food 1 -->
+                <div class="product-item-card hidden" data-group="food">
+                    <div class="product-details">
+                        <div class="product-meta">
+                            <h3>Wiltshire Ham & Cheddar Toastie</h3>
+                            <span class="item-tag">Hot Pick</span>
+                        </div>
+                        <p>Pulled premium baked ham paired with mature cheddar cheese on fresh sourdough bread.</p>
+                        <div class="nutrition-matrix">
+                            <span class="nutri-badge">385 kcal</span>
+                            <span class="allergen-badge">Gluten</span>
+                            <span class="allergen-badge">Dairy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food 2 -->
+                <div class="product-item-card hidden" data-group="food">
+                    <div class="product-details">
+                        <div class="product-meta">
+                            <h3>Vegan Tomato & Cheeze Toastie</h3>
+                            <span class="item-tag">Plant Based</span>
+                        </div>
+                        <p>Dairy-free melted cheese alternatives layer over fresh heirloom sliced tomatoes.</p>
+                        <div class="nutrition-matrix">
+                            <span class="nutri-badge">310 kcal</span>
+                            <span class="allergen-badge">Gluten</span>
+                            <span class="status-badge vegan">Vegan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Footer Hierarchy -->
+    <footer class="corporate-footer">
+        <div class="container footer-main-grid">
+            <div class="footer-brand-column">
+                <h3>COSTAVIBE</h3>
+                <p>Voted the nation's premier destination for high quality roasted beans and sustainably developed community spaces.</p>
+                <div class="corporate-socials">
+                    <a href="#" aria-label="Facebook Link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter Link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="TikTok Link"><i class="fab fa-tiktok"></i></a>
+                </div>
             </div>
             
-            <div class="tab-container">
-                <button class="tab-btn active" data-target="coffee">Coffee</button>
-                <button class="tab-btn" data-target="pastries">Pastries</button>
-                <button class="tab-btn" data-target="food">Light Bites</button>
+            <div class="footer-links-column">
+                <h4>Our Coffee</h4>
+                <a href="#">Sourcing Standards</a>
+                <a href="#">Roastery Processes</a>
+                <a href="#">Allergen Directory</a>
+                <a href="#">Nutrition Estimator</a>
             </div>
 
-            <div class="menu-grid" id="menuGrid">
-                <div class="menu-item" data-category="coffee">
-                    <div class="menu-item-info">
-                        <h3>Vanilla Latte <span class="price">$4.50</span></h3>
-                        <p>Espresso, steamed milk, and organic house-made vanilla bean syrup.</p>
-                    </div>
-                </div>
-                <div class="menu-item" data-category="coffee">
-                    <div class="menu-item-info">
-                        <h3>Cold Brew Nitro <span class="price">$5.00</span></h3>
-                        <p>Infused with nitrogen for a rich, creamy head and ultra-smooth taste.</p>
-                    </div>
-                </div>
-                <div class="menu-item" data-category="coffee">
-                    <div class="menu-item-info">
-                        <h3>Caramel Macchiato <span class="price">$4.75</span></h3>
-                        <p>Drizzled with buttery caramel over velvety steamed milk and espresso.</p>
-                    </div>
-                </div>
+            <div class="footer-links-column">
+                <h4>Business & Careers</h4>
+                <a href="#">Franchise Inquiries</a>
+                <a href="#">Corporate Solutions</a>
+                <a href="#">Careers Hub</a>
+                <a href="#">Press Office</a>
+            </div>
 
-                <div class="menu-item hidden" data-category="pastries">
-                    <div class="menu-item-info">
-                        <h3>Almond Croissant <span class="price">$3.75</span></h3>
-                        <p>Flaky, buttery pastry filled with sweet almond frangipane cream.</p>
-                    </div>
-                </div>
-                <div class="menu-item hidden" data-category="pastries">
-                    <div class="menu-item-info">
-                        <h3>Blueberry Scone <span class="price">$3.50</span></h3>
-                        <p>Soft, crumbly British-style scone packed with fresh wild blueberries.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item hidden" data-category="food">
-                    <div class="menu-item-info">
-                        <h3>Avocado Sourdough Toast <span class="price">$8.50</span></h3>
-                        <p>Crushed avocado, cherry tomatoes, feta cheese, and microgreens.</p>
-                    </div>
-                </div>
-                <div class="menu-item hidden" data-category="food">
-                    <div class="menu-item-info">
-                        <h3>Caprese Panini <span class="price">$9.00</span></h3>
-                        <p>Fresh mozzarella, vine tomatoes, basil pesto, pressed on ciabatta.</p>
-                    </div>
-                </div>
+            <div class="footer-links-column">
+                <h4>Legal & Policies</h4>
+                <a href="#">Privacy Framework</a>
+                <a href="#">Cookie Architecture</a>
+                <a href="#">Accessibility Operations</a>
+                <a href="#">Modern Slavery Declarations</a>
             </div>
         </div>
-    </section>
-
-    <section id="testimonials" class="testimonials section-padding">
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="testimonial-slide active">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text">"Hands down the best cold brew in the city. The staff actually knows their beans, and the atmosphere makes it incredibly easy to focus on work."</p>
-                    <h4>— Sarah K.</h4>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text">"Their almond croissants are to die for! Crispy on the outside, soft on the inside. I come here every Saturday morning without fail."</p>
-                    <h4>— David L.</h4>
-                </div>
-            </div>
-            <div class="slider-dots">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact section-padding">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Visit the Haven</h2>
-                    <p>We are conveniently located in the downtown arts district. Drop by or reach out for catering events.</p>
-                    <ul class="info-list">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Bean Street, Brewtown, NY 10001</li>
-                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> hello@aromahaven.com</li>
-                    </ul>
-                    <h3>Hours of Operation</h3>
-                    <ul class="hours-list">
-                        <li><span>Monday - Friday</span> <span>6:00 AM - 7:00 PM</span></li>
-                        <li><span>Saturday</span> <span>7:00 AM - 8:00 PM</span></li>
-                        <li><span>Sunday</span> <span>8:00 AM - 5:00 PM</span></li>
-                    </ul>
-                </div>
-                <div class="contact-form-container">
-                    <h3>Drop Us a Line</h3>
-                    <form id="cafeForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Your Message or Reservation Details..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </form>
-                    <div id="formFeedback" class="form-feedback hidden"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Aroma Haven. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-bottom-bar">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 CostaVibe Global Infrastructure Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
