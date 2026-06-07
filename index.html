@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CostaVibe | The Nation's Favourite Coffee Hub</title>
+    <title>CostaVibe | High-End Digital Coffee Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- Corporate Design Foundations --- */
+        /* --- High-End CSS Architecture --- */
         :root {
-            --costa-maroon: #631D2F;      /* Iconic primary commercial brand color */
-            --costa-dark-burgundy: #4A1220;
-            --costa-gold: #DDA15E;
-            --costa-soft-bg: #F9F6F0;     /* Refined off-white layout surface */
-            --text-main: #222222;
-            --text-muted: #555555;
-            --white: #FFFFFF;
-            --border-light: #E5E0D8;
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --brand-maroon: #5B132B;
+            --brand-maroon-light: #6F1A36;
+            --brand-gold: #C69C6D;
+            --brand-gold-dark: #A47E53;
+            --surface-cream: #FAF7F2;
+            --surface-white: #FFFFFF;
+            --text-dark: #1C1917;
+            --text-muted: #6B6661;
+            --border-subtle: #EFEBE4;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 2px 8px rgba(28, 25, 23, 0.04);
+            --shadow-md: 0 12px 34px rgba(28, 25, 23, 0.08);
         }
 
         * {
@@ -29,84 +36,123 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
-            font-family: var(--font-stack);
-            color: var(--text-main);
-            background-color: var(--white);
-            line-height: 1.5;
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            background-color: var(--surface-white);
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 32px;
         }
 
-        /* --- Dynamic Buttons --- */
+        section {
+            padding: 100px 0;
+        }
+
+        /* --- Premium Typography Hierarchy --- */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .section-header {
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        .section-header.center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header .tagline {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--brand-maroon);
+        }
+
+        /* --- Global Custom Interactive Elements --- */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 28px;
+            padding: 14px 32px;
+            font-family: var(--font-sans);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-decoration: none;
-            border-radius: 30px;
-            transition: var(--transition-smooth);
+            border-radius: 4px; /* Crisp luxury corners instead of round oval pills */
+            transition: var(--transition-premium);
             cursor: pointer;
             border: none;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background-color: var(--costa-maroon);
-            color: var(--white);
+            background-color: var(--brand-maroon);
+            color: var(--surface-white);
+            box-shadow: 0 4px 14px rgba(91, 19, 43, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: var(--costa-dark-burgundy);
+            background-color: var(--brand-maroon-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(91, 19, 43, 0.3);
         }
 
         .btn-outline {
             background-color: transparent;
-            color: var(--costa-maroon);
-            border: 2px solid var(--costa-maroon);
+            color: var(--brand-maroon);
+            border: 1px solid var(--brand-maroon);
         }
 
         .btn-outline:hover {
-            background-color: var(--costa-maroon);
-            color: var(--white);
+            background-color: var(--brand-maroon);
+            color: var(--surface-white);
+            transform: translateY(-2px);
         }
 
-        .btn-accent {
-            background-color: var(--text-main);
-            color: var(--white);
-        }
-
-        .btn-accent:hover {
-            background-color: #000000;
-        }
-
-        .btn-sm {
-            padding: 8px 18px;
-            font-size: 0.85rem;
-        }
-
-        /* --- Header System --- */
+        /* --- Interactive Structural Header --- */
         .main-header {
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 999;
-            background-color: var(--white);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-premium);
         }
 
+        /* Utility System */
         .utility-bar {
-            background-color: var(--costa-soft-bg);
-            border-bottom: 1px solid var(--border-light);
+            background-color: var(--brand-maroon);
             font-size: 0.75rem;
             padding: 8px 0;
+            transition: var(--transition-premium);
         }
 
         .utility-flex {
@@ -116,26 +162,21 @@
         }
 
         .utility-bar a {
-            color: var(--text-muted);
+            color: rgba(250, 247, 242, 0.7);
             text-decoration: none;
-            margin-right: 20px;
-            font-weight: 500;
+            margin-right: 24px;
+            transition: var(--transition-premium);
         }
 
         .utility-bar a:hover {
-            color: var(--costa-maroon);
+            color: var(--surface-white);
         }
 
-        .utility-bar .util-login-btn {
-            margin-right: 0;
-            background-color: var(--border-light);
-            padding: 2px 10px;
-            border-radius: 12px;
-            color: var(--text-main);
-        }
-
+        /* Navigation Architecture */
         .navbar {
-            padding: 16px 0;
+            padding: 24px 0;
+            background-color: transparent;
+            transition: var(--transition-premium);
         }
 
         .nav-flex {
@@ -145,538 +186,582 @@
         }
 
         .brand-logo {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--brand-maroon);
+            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: var(--costa-maroon);
-            text-decoration: none;
+            gap: 12px;
         }
 
-        .logo-circle {
-            background-color: var(--costa-maroon);
-            color: var(--white);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.95rem;
+        .brand-logo span {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            border-left: 1px solid var(--brand-gold);
+            padding-left: 12px;
         }
 
         .nav-menu a {
-            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
             text-decoration: none;
-            font-weight: 600;
-            margin: 0 16px;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
+            margin: 0 20px;
+            position: relative;
+            transition: var(--transition-premium);
         }
 
-        .nav-menu a:hover {
-            color: var(--costa-maroon);
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--brand-gold);
+            transition: var(--transition-premium);
+        }
+
+        .nav-menu a:hover::after, .nav-menu a.active::after {
+            width: 100%;
         }
 
         .mobile-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.3rem;
-            color: var(--text-main);
+            font-size: 1.4rem;
+            color: var(--text-dark);
             cursor: pointer;
         }
 
-        /* --- Hero Showcase Section --- */
-        .hero-showcase {
-            background-color: var(--costa-soft-bg);
-            padding: 60px 0;
-            overflow: hidden;
+        /* Active Header State on Scroll */
+        .main-header.scrolled .utility-bar {
+            margin-top: -32px; /* Smoothly rolls utility bar out of view */
         }
 
-        .hero-split {
+        .main-header.scrolled .navbar {
+            padding: 16px 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* --- Premium Editorial Hero Module --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--surface-cream);
+            padding-top: 140px;
+            position: relative;
+        }
+
+        .hero-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .hero-text-content .badge {
-            display: inline-block;
-            background-color: var(--costa-gold);
-            color: #4A2800;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 4px 12px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-        }
-
-        .hero-text-content h1 {
-            font-size: 3.2rem;
-            line-height: 1.15;
-            color: var(--costa-maroon);
-            margin-bottom: 20px;
-        }
-
-        .hero-text-content p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            max-width: 520px;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 16px;
-        }
-
-        .hero-image-wrapper img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-        }
-
-        /* --- Rewards Ecosystem Banner --- */
-        .loyalty-banner {
-            background-color: var(--costa-maroon);
-            color: var(--white);
-            padding: 60px 0;
-        }
-
-        .loyalty-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
             gap: 60px;
             align-items: center;
         }
 
-        .mock-app-card {
-            background-color: var(--costa-dark-burgundy);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        }
-
-        .card-brand {
-            font-weight: 700;
-            letter-spacing: 1px;
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--brand-maroon);
             margin-bottom: 24px;
         }
 
-        .beans-counter {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 20px;
+        .hero-content h1 em {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--brand-gold-dark);
         }
 
-        .bean {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.3);
-        }
-
-        .bean.active {
-            background-color: var(--costa-gold);
-            color: var(--costa-dark-burgundy);
-        }
-
-        .card-status {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        .loyalty-info h2 {
-            font-size: 2.2rem;
-            margin-bottom: 16px;
-        }
-
-        .loyalty-info p {
-            font-size: 1.05rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            max-width: 620px;
-        }
-
-        .app-badges {
-            display: flex;
-            gap: 12px;
-        }
-
-        .app-btn {
-            background-color: var(--white);
-            color: var(--text-main);
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition-smooth);
-        }
-
-        .app-btn:hover {
-            transform: translateY(-2px);
-            background-color: var(--costa-soft-bg);
-        }
-
-        /* --- Combo Promo Cards --- */
-        .campaigns-section {
-            padding: 80px 24px;
-        }
-
-        .section-title-block {
+        .hero-content p {
+            font-size: 1.15rem;
             margin-bottom: 40px;
+            max-width: 540px;
         }
 
-        .section-title-block.center {
-            text-align: center;
-        }
-
-        .section-title-block h2 {
-            font-size: 2rem;
-            color: var(--costa-maroon);
-            margin-bottom: 8px;
-        }
-
-        .section-title-block p {
-            color: var(--text-muted);
-        }
-
-        .campaign-cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .campaign-card {
-            border: 1px solid var(--border-light);
-            border-radius: 16px;
-            overflow: hidden;
-            background-color: var(--white);
-            transition: var(--transition-smooth);
-        }
-
-        .campaign-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-        }
-
-        .card-tag {
-            background-color: var(--costa-soft-bg);
-            padding: 8px 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--costa-maroon);
-            text-transform: uppercase;
-        }
-
-        .campaign-body {
-            padding: 30px;
-        }
-
-        .campaign-body h3 {
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-        }
-
-        .price-point {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--costa-maroon);
-            margin-bottom: 12px;
-        }
-
-        .campaign-body p {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-        }
-
-        .card-link {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .card-link:hover {
-            color: var(--costa-maroon);
-        }
-
-        /* --- Interactive Filterable Product Menu --- */
-        .interactive-menu-module {
-            background-color: var(--costa-soft-bg);
-            padding: 80px 0;
-        }
-
-        .menu-controls {
+        .hero-actions {
             display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 40px;
+            gap: 16px;
         }
 
-        .filter-chip {
-            background-color: var(--white);
-            border: 1px solid var(--border-light);
-            padding: 10px 24px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.9rem;
-            transition: var(--transition-smooth);
+        .hero-image-frame {
+            position: relative;
         }
 
-        .filter-chip.active, .filter-chip:hover {
-            background-color: var(--costa-maroon);
-            color: var(--white);
-            border-color: var(--costa-maroon);
+        .hero-image-frame img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: var(--shadow-md);
         }
 
-        .corporate-menu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .product-item-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: 24px;
-            border: 1px solid rgba(0,0,0,0.03);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            display: flex;
-            animation: layoutFade 0.35s ease-out forwards;
-        }
-
-        .product-item-card.hidden {
-            display: none;
-        }
-
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-        }
-
-        .product-meta h3 {
-            font-size: 1.2rem;
-            color: var(--text-main);
-        }
-
-        .item-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            background-color: var(--border-light);
-            padding: 2px 8px;
+        /* Decorative architectural structural element */
+        .hero-image-frame::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--brand-gold);
+            z-index: -1;
             border-radius: 4px;
         }
 
-        .product-details p {
-            color: var(--text-muted);
+        /* --- Corporate Structured Campaigns --- */
+        .campaigns {
+            background-color: var(--surface-white);
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .campaign-card {
+            background-color: var(--surface-cream);
+            border-radius: 4px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-premium);
+        }
+
+        .campaign-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .campaign-img {
+            width: 40%;
+        }
+
+        .campaign-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .campaign-info {
+            width: 60%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .campaign-info .time-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--brand-gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .campaign-info h3 {
+            font-size: 1.5rem;
+            color: var(--brand-maroon);
+            margin-bottom: 8px;
+        }
+
+        .campaign-info .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .campaign-info p {
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .campaign-info .link-btn {
+            color: var(--brand-maroon);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- Fully Realized Professional Menu Section --- */
+        .menu-section {
+            background-color: var(--surface-cream);
+        }
+
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .tab-trigger {
+            background-color: var(--surface-white);
+            border: 1px solid var(--border-subtle);
+            padding: 12px 28px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition-premium);
+        }
+
+        .tab-trigger.active, .tab-trigger:hover {
+            background-color: var(--brand-maroon);
+            color: var(--surface-white);
+            border-color: var(--brand-maroon);
+        }
+
+        .luxury-menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .menu-item-card {
+            background-color: var(--surface-white);
+            border-radius: 4px;
+            padding: 24px;
+            display: flex;
+            gap: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-premium);
+            animation: cardEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .menu-item-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .menu-item-card.hidden {
+            display: none;
+        }
+
+        .item-thumb {
+            width: 100px;
+            height: 100px;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .item-title-row h3 {
+            font-size: 1.25rem;
+            color: var(--brand-maroon);
+        }
+
+        .item-desc {
             font-size: 0.9rem;
             margin-bottom: 16px;
         }
 
-        .nutrition-matrix {
+        .item-badges {
             display: flex;
             gap: 8px;
+        }
+
+        .badge-nutri {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background-color: #F4F1EA;
+            padding: 3px 10px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+
+        .badge-allergen {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background-color: #F9EBEF;
+            color: var(--brand-maroon);
+            padding: 3px 10px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- Split Contact Architecture with Live Client Validation --- */
+        .contact-section {
+            background-color: var(--surface-white);
+        }
+
+        .contact-split {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+        }
+
+        .info-panel h3 {
+            font-size: 2rem;
+            color: var(--brand-maroon);
+            margin-bottom: 16px;
+        }
+
+        .info-panel > p {
+            margin-bottom: 32px;
+        }
+
+        .contact-details-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .contact-details-list li {
+            display: flex;
             align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
         }
 
-        .nutri-badge {
+        .contact-details-list li i {
+            color: var(--brand-gold-dark);
+            width: 20px;
+        }
+
+        .hours-box {
+            background-color: var(--surface-cream);
+            padding: 32px;
+            border-radius: 4px;
+        }
+
+        .hours-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.08);
+        }
+
+        /* Production Form Element Layout Styles */
+        .form-wrapper {
+            background-color: var(--surface-cream);
+            padding: 48px;
+            border-radius: 4px;
+        }
+
+        .form-wrapper h3 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--surface-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition-premium);
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--brand-maroon);
+            box-shadow: 0 0 0 3px rgba(91, 19, 43, 0.05);
+        }
+
+        /* Validation UI Message Boxes */
+        .error-message {
             font-size: 0.75rem;
-            font-weight: 700;
-            background-color: #ECE7DF;
-            padding: 2px 8px;
-            border-radius: 10px;
+            color: #C1121F;
+            margin-top: 4px;
+            display: none;
         }
 
-        .allergen-badge {
-            font-size: 0.75rem;
-            background-color: #F0E2E5;
-            color: var(--costa-maroon);
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 10px;
+        .input-group.invalid input, .input-group.invalid textarea {
+            border-color: #C1121F;
+            background-color: #FFF5F5;
         }
 
-        .status-badge.vegan {
-            font-size: 0.75rem;
-            background-color: #E2F0E5;
-            color: #1E632F;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 10px;
+        .input-group.invalid .error-message {
+            display: block;
         }
 
-        /* --- Enterprise Footer System --- */
-        .corporate-footer {
-            background-color: #241A1C;
-            color: var(--white);
-            padding: 60px 0 0 0;
+        .submit-alert {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: none;
         }
 
-        .footer-main-grid {
+        .submit-alert.success {
+            display: block;
+            background-color: #D8F3DC;
+            color: #1B4332;
+            border: 1px solid #B7E4C7;
+        }
+
+        /* --- Corporate Architectural Footer --- */
+        .footer-corporate {
+            background-color: #161413;
+            color: var(--surface-white);
+            padding: 80px 0 0 0;
+        }
+
+        .footer-top-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr;
             gap: 40px;
-            margin-bottom: 50px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .footer-brand-column h3 {
-            letter-spacing: 1px;
+        .footer-column h3 {
+            font-size: 1.4rem;
             margin-bottom: 16px;
-            color: var(--white);
+            letter-spacing: 1px;
         }
 
-        .footer-brand-column p {
+        .footer-column p {
             font-size: 0.85rem;
-            opacity: 0.6;
-            margin-bottom: 20px;
-            max-width: 260px;
-        }
-
-        .corporate-socials {
-            display: flex;
-            gap: 14px;
-        }
-
-        .corporate-socials a {
-            color: var(--white);
             opacity: 0.5;
+            max-width: 260px;
+            margin-bottom: 20px;
+        }
+
+        .social-matrix {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-matrix a {
+            color: var(--surface-white);
+            opacity: 0.4;
             font-size: 1.1rem;
-            transition: var(--transition-smooth);
+            transition: var(--transition-premium);
         }
 
-        .corporate-socials a:hover {
+        .social-matrix a:hover {
             opacity: 1;
-            color: var(--costa-gold);
+            color: var(--brand-gold);
         }
 
-        .footer-links-column h4 {
-            font-size: 0.95rem;
-            margin-bottom: 18px;
-            font-weight: 600;
-            color: var(--costa-gold);
+        .footer-column h4 {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--brand-gold);
+            margin-bottom: 20px;
         }
 
-        .footer-links-column a {
+        .footer-column a {
             display: block;
-            color: var(--white);
-            opacity: 0.7;
+            color: var(--surface-white);
+            opacity: 0.6;
             text-decoration: none;
             font-size: 0.85rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             transition: var(--transition-smooth);
         }
 
-        .footer-links-column a:hover {
+        .footer-column a:hover {
             opacity: 1;
-            padding-left: 4px;
+            color: var(--brand-gold);
         }
 
-        .footer-bottom-bar {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 24px 0;
+        .footer-base {
+            padding: 30px 0;
             font-size: 0.8rem;
-            color: rgba(255,255,255,0.4);
+            opacity: 0.4;
         }
 
-        /* --- Viewport Layout Adjustments --- */
-        @keyframes layoutFade {
-            from { opacity: 0; transform: translateY(6px); }
+        /* --- Smooth Layout Render Animations --- */
+        @keyframes cardEntrance {
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* --- Device Interface Viewport Optimizations --- */
         @media (max-width: 992px) {
-            .hero-split {
+            h1 { font-size: 3rem !important; }
+            .hero-grid, .campaign-grid, .luxury-menu-grid, .contact-split {
                 grid-template-columns: 1fr;
-                text-align: center;
+                gap: 40px;
             }
-            .hero-text-content p {
-                margin: 0 auto 32px auto;
-            }
-            .hero-cta-group {
-                justify-content: center;
-            }
-            .hero-image-wrapper img {
-                height: 320px;
-            }
-            .loyalty-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .footer-main-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .hero-image-frame img { height: 400px; }
+            .footer-top-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
-            .hide-mobile {
-                display: none !important;
-            }
-            .mobile-toggle {
-                display: block;
-            }
+            .hide-on-mobile { display: none !important; }
+            .mobile-toggle { display: block; }
+            
             .nav-menu {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--white);
+                background-color: var(--surface-white);
                 flex-direction: column;
-                padding: 20px 0;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-                border-top: 1px solid var(--border-light);
+                padding: 24px;
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid var(--border-subtle);
             }
-            .nav-menu.active {
-                display: flex;
-            }
-            .nav-menu a {
-                padding: 12px 24px;
-                margin: 0;
-                width: 100%;
-            }
-            .campaign-cards-grid, .corporate-menu-grid {
-                grid-template-columns: 1fr;
-            }
+
+            .nav-menu.active { display: flex; }
+            .nav-menu a { margin: 12px 0; font-size: 1rem; }
+            .campaign-card { flex-direction: column; }
+            .campaign-img, .campaign-info { width: 100%; }
+            .form-wrapper { padding: 32px; }
+            .footer-top-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="main-header" id="dynamicHeader">
         <div class="utility-bar">
             <div class="container utility-flex">
                 <div class="utility-left">
-                    <a href="#sustainability">Sustainability</a>
-                    <a href="#foundation">Our Foundation</a>
+                    <a href="#">Sourcing Standards</a>
+                    <a href="#">Environmental Support</a>
                 </div>
                 <div class="utility-right">
-                    <a href="#locator"><i class="fas fa-map-marker-alt"></i> Find a Store</a>
-                    <a href="#login" class="util-login-btn">Log In</a>
+                    <a href="#contact"><i class="fas fa-map-marker-alt"></i> Find a Store</a>
+                    <a href="#" class="util-login-btn">Log In</a>
                 </div>
             </div>
         </div>
@@ -684,20 +769,18 @@
         <div class="navbar">
             <div class="container nav-flex">
                 <a href="#" class="brand-logo">
-                    <span class="logo-circle"><i class="fas fa-coffee"></i></span>
-                    COSTAVIBE
+                    COSTAVIBE <span>EST. 2026</span>
                 </a>
                 
                 <nav class="nav-menu" id="navMenu">
-                    <a href="#menu" class="nav-item">Our Menu</a>
-                    <a href="#loyalty" class="nav-item">CostaVibe Club</a>
-                    <a href="#deals" class="nav-item">Deals & Offers</a>
-                    <a href="#at-home" class="nav-item">Shop At Home</a>
+                    <a href="#menu" class="active">Our Menu</a>
+                    <a href="#campaigns">Deals & Offers</a>
+                    <a href="#contact">Hours & Locations</a>
                 </nav>
 
                 <div class="nav-actions">
-                    <a href="#order" class="btn btn-accent btn-sm hide-mobile">Order Online</a>
-                    <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                    <a href="#contact" class="btn btn-primary btn-sm hide-on-mobile">Order Collection</a>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu Drawer">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -705,145 +788,129 @@
         </div>
     </header>
 
-    <section class="hero-showcase">
-        <div class="hero-split container">
-            <div class="hero-text-content">
-                <span class="badge">New Summer Release</span>
-                <h1>Discover the Iced Velvetino</h1>
-                <p>Silky-smooth signature espresso crafted with creamy dairy alternatives, served over ice for the ultimate seasonal chill. Summer refreshment, perfected.</p>
-                <div class="hero-cta-group">
-                    <a href="#menu" class="btn btn-primary">See the Menu</a>
-                    <a href="#loyalty" class="btn btn-outline">Earn Rewards</a>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="section-header"><span class="tagline">The Art of Roasting</span></span>
+                <h1>Roasted fresh. Smoked <em>passionately</em>.</h1>
+                <p>Welcome to the nation's premier digital sanctuary for ethically sourced specialty roasts, delicate pastries, and cozy modern spaces built for connection.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn btn-outline">Find a Location</a>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced Latte Coffee Showcase">
+            <div class="hero-image-frame">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Specialty Barista Brewing Coffee">
             </div>
         </div>
     </section>
 
-    <section id="loyalty" class="loyalty-banner">
-        <div class="container loyalty-grid">
-            <div class="loyalty-graphic">
-                <div class="mock-app-card">
-                    <div class="card-brand"><i class="fas fa-coffee"></i> Club</div>
-                    <div class="beans-counter">
-                        <span class="bean active"><i class="fas fa-seedling"></i></span>
-                        <span class="bean active"><i class="fas fa-seedling"></i></span>
-                        <span class="bean active"><i class="fas fa-seedling"></i></span>
-                        <span class="bean"><i class="fas fa-seedling"></i></span>
-                        <span class="bean"><i class="fas fa-seedling"></i></span>
-                    </div>
-                    <p class="card-status">3 Beans Earned. 7 more to a free drink!</p>
-                </div>
-            </div>
-            <div class="loyalty-info">
-                <h2>Buy 10 drinks, get 1 FREE</h2>
-                <p>Join the CostaVibe Club today to track your purchases automatically, unlock personalized treats, and trade beans for premium extras like syrups or cream over the app.</p>
-                <div class="app-badges">
-                    <a href="#" class="app-btn"><i class="fab fa-apple"></i> App Store</a>
-                    <a href="#" class="app-btn"><i class="fab fa-google-play"></i> Google Play</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="deals" class="campaigns-section container">
-        <div class="section-title-block">
-            <h2>Good Mornings, Made Better</h2>
-            <p>Explore our limited-time structured combinations available across participating nationwide stores.</p>
-        </div>
-        
-        <div class="campaign-cards-grid">
-            <div class="campaign-card">
-                <div class="card-tag">Before 11:00 AM</div>
-                <div class="campaign-body">
-                    <h3>The Artisan Breakfast Deal</h3>
-                    <p class="price-point">From £7.49</p>
-                    <p>Enjoy a premium breakfast item paired with a medium handcrafted coffee and fresh juice fruit options to start your morning right.</p>
-                    <a href="#locator" class="card-link">Find Nearby Store <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="campaign-card">
-                <div class="card-tag">11:00 AM - 2:00 PM</div>
-                <div class="campaign-body">
-                    <h3>The Midday Lunch Fix</h3>
-                    <p class="price-point">From £6.49</p>
-                    <p>Pair any classic signature hot toastie or pressed item with your choice of medium hot or cold espresso beverage options.</p>
-                    <a href="#locator" class="card-link">Find Nearby Store <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="menu" class="interactive-menu-module">
+    <section id="campaigns" class="campaigns">
         <div class="container">
-            <div class="section-title-block center">
-                <h2>Explore Our Crafted Menu</h2>
-                <p>Filter products by category to view detailed nutrition metrics and allergen breakdowns instantly.</p>
+            <div class="section-header center">
+                <span class="tagline">Exclusive Combos</span>
+                <h2>Good Mornings, Made Better</h2>
+                <p>Curated culinary bundles constructed to elevate your morning routine or midday lunch break.</p>
             </div>
 
-            <div class="menu-controls">
-                <button class="filter-chip active" data-filter="drinks">Handcrafted Drinks</button>
-                <button class="filter-chip" data-filter="food">Savory Bites</button>
+            <div class="campaign-grid">
+                <div class="campaign-card">
+                    <div class="campaign-img">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" alt="Breakfast Sandwich Combination">
+                    </div>
+                    <div class="campaign-info">
+                        <span class="time-tag">Before 11:00 AM</span>
+                        <h3>Artisan Breakfast Pairing</h3>
+                        <p class="price">From £7.49</p>
+                        <p>Select any premium breakfast brioche bun paired alongside a small handcrafted hot espresso selection.</p>
+                        <a href="#contact" class="link-btn">Check Location Pricing <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-img">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&q=80" alt="Pressed Lunch Toastie">
+                    </div>
+                    <div class="campaign-info">
+                        <span class="time-tag">11:00 AM - 2:00 PM</span>
+                        <h3>Midday Lunch Fix</h3>
+                        <p class="price">From £6.49</p>
+                        <p>Pair any traditional pressed sourdough toastie with a rich, smooth signature iced latte selection.</p>
+                        <a href="#contact" class="link-btn">Check Location Pricing <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="tagline">Curated Selection</span>
+                <h2>Explore the Menu Portfolio</h2>
+                <p>Hand-selected favorites optimized with comprehensive allergen indices and caloric metrics.</p>
             </div>
 
-            <div class="corporate-menu-grid" id="interactiveGrid">
-                <div class="product-item-card" data-group="drinks">
-                    <div class="product-details">
-                        <div class="product-meta">
+            <div class="menu-tabs">
+                <button class="tab-trigger active" data-target="drinks">Handcrafted Drinks</button>
+                <button class="tab-trigger" data-target="food">Savory & Sweet</button>
+            </div>
+
+            <div class="luxury-menu-grid" id="menuGrid">
+                <div class="menu-item-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=200&q=80" alt="Signature Flat White" class="item-thumb">
+                    <div class="item-details">
+                        <div class="item-title-row">
                             <h3>Signature Flat White</h3>
-                            <span class="item-tag">Classic</span>
                         </div>
-                        <p>Short, intense espresso shots expertly paired with velvety smooth texturized whole milk.</p>
-                        <div class="nutrition-matrix">
-                            <span class="nutri-badge">115 kcal</span>
-                            <span class="allergen-badge" title="Contains Milk">Dairy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item-card" data-group="drinks">
-                    <div class="product-details">
-                        <div class="product-meta">
-                            <h3>Iced Caramel Macchiato</h3>
-                            <span class="item-tag">Summer Special</span>
-                        </div>
-                        <p>Chilled espresso poured over fresh cold milk, finished with organic caramel drizzle.</p>
-                        <div class="nutrition-matrix">
-                            <span class="nutri-badge">190 kcal</span>
-                            <span class="allergen-badge">Dairy</span>
+                        <p class="item-desc">Short, velvet-textured ristretto extractions integrated smoothly with whole steamed milk matrix.</p>
+                        <div class="item-badges">
+                            <span class="badge-nutri">115 kcal</span>
+                            <span class="badge-allergen">Dairy</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item-card hidden" data-group="food">
-                    <div class="product-details">
-                        <div class="product-meta">
-                            <h3>Wiltshire Ham & Cheddar Toastie</h3>
-                            <span class="item-tag">Hot Pick</span>
+                <div class="menu-item-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=200&q=80" alt="Iced Velvetino" class="item-thumb">
+                    <div class="item-details">
+                        <div class="item-title-row">
+                            <h3>Iced Velvetino Latte</h3>
                         </div>
-                        <p>Pulled premium baked ham paired with mature cheddar cheese on fresh sourdough bread.</p>
-                        <div class="nutrition-matrix">
-                            <span class="nutri-badge">385 kcal</span>
-                            <span class="allergen-badge">Gluten</span>
-                            <span class="allergen-badge">Dairy</span>
+                        <p class="item-desc">Chilled signature espresso structured elegantly over mineral ice shards and plant-based oat alternatives.</p>
+                        <div class="item-badges">
+                            <span class="badge-nutri">190 kcal</span>
+                            <span class="badge-allergen">Vegan Friendly</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item-card hidden" data-group="food">
-                    <div class="product-details">
-                        <div class="product-meta">
-                            <h3>Vegan Tomato & Cheeze Toastie</h3>
-                            <span class="item-tag">Plant Based</span>
+                <div class="menu-item-card hidden" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=200&q=80" alt="Sourdough Toastie" class="item-thumb">
+                    <div class="item-details">
+                        <div class="item-title-row">
+                            <h3>Wiltshire Ham Toastie</h3>
                         </div>
-                        <p>Dairy-free melted cheese alternatives layer over fresh heirloom sliced tomatoes.</p>
-                        <div class="nutrition-matrix">
-                            <span class="nutri-badge">310 kcal</span>
-                            <span class="allergen-badge">Gluten</span>
-                            <span class="status-badge vegan">Vegan</span>
+                        <p class="item-desc">Pulled smoked English ham paired with mature artisanal white cheddar on crisp sliced sourdough wheat.</p>
+                        <div class="item-badges">
+                            <span class="badge-nutri">385 kcal</span>
+                            <span class="badge-allergen">Gluten</span>
+                            <span class="badge-allergen">Dairy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card hidden" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=200&q=80" alt="Almond Croissant" class="item-thumb">
+                    <div class="item-details">
+                        <div class="item-title-row">
+                            <h3>Artisanal Almond Croissant</h3>
+                        </div>
+                        <p class="item-desc">Flaky laminated French butter pastry loaded with sweet frangipane paste and topped with toasted sliced almonds.</p>
+                        <div class="item-badges">
+                            <span class="badge-nutri">290 kcal</span>
+                            <span class="badge-allergen">Nuts</span>
+                            <span class="badge-allergen">Gluten</span>
                         </div>
                     </div>
                 </div>
@@ -851,91 +918,200 @@
         </div>
     </section>
 
-    <footer class="corporate-footer">
-        <div class="container footer-main-grid">
-            <div class="footer-brand-column">
-                <h3>COSTAVIBE</h3>
-                <p>Voted the nation's premier destination for high quality roasted beans and sustainably developed community spaces.</p>
-                <div class="corporate-socials">
-                    <a href="#" aria-label="Facebook Link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter Link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="TikTok Link"><i class="fab fa-tiktok"></i></a>
+    <section id="contact" class="contact-section">
+        <div class="container contact-split">
+            <div class="info-panel">
+                <span class="section-header"><span class="tagline">Visit Infrastructure</span></span>
+                <h3>Connect with our Hub</h3>
+                <p>Drop by any of our modern workspaces or submit an internal reservation message directly to our management registry.</p>
+                
+                <ul class="contact-details-list">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Commercial Plaza, Central London, EC1A 1BB</li>
+                    <li><i class="fas fa-phone"></i> +44 (0) 20 7946 0192</li>
+                    <li><i class="fas fa-envelope"></i> corporate@costavibe.co.uk</li>
+                </ul>
+
+                <div class="hours-box">
+                    <h4>Operational Timeline</h4>
+                    <div class="hours-row"><span>Monday - Friday</span> <span>06:30 - 19:30</span></div>
+                    <div class="hours-row"><span>Saturday</span> <span>07:00 - 20:00</span></div>
+                    <div class="hours-row"><span>Sunday</span> <span>08:00 - 18:00</span></div>
                 </div>
             </div>
-            
-            <div class="footer-links-column">
-                <h4>Our Coffee</h4>
-                <a href="#">Sourcing Standards</a>
-                <a href="#">Roastery Processes</a>
-                <a href="#">Allergen Directory</a>
-                <a href="#">Nutrition Estimator</a>
-            </div>
 
-            <div class="footer-links-column">
-                <h4>Business & Careers</h4>
-                <a href="#">Franchise Inquiries</a>
-                <a href="#">Corporate Solutions</a>
-                <a href="#">Careers Hub</a>
-                <a href="#">Press Office</a>
-            </div>
+            <div class="form-wrapper">
+                <h3>Submit an Inquiry</h3>
+                <form id="enterpriseForm" novalidate>
+                    <div class="input-group" id="nameGroup">
+                        <input type="text" id="formName" placeholder="Full Name" autocomplete="name">
+                        <div class="error-message">Name profile parameters must contain at least 2 characters.</div>
+                    </div>
 
-            <div class="footer-links-column">
-                <h4>Legal & Policies</h4>
-                <a href="#">Privacy Framework</a>
-                <a href="#">Cookie Architecture</a>
-                <a href="#">Accessibility Operations</a>
-                <a href="#">Modern Slavery Declarations</a>
+                    <div class="input-group" id="emailGroup">
+                        <input type="email" id="formEmail" placeholder="Corporate Email Address" autocomplete="email">
+                        <div class="error-message">Please enter a valid, structured email address.</div>
+                    </div>
+
+                    <div class="input-group" id="messageGroup">
+                        <textarea id="formMessage" rows="5" placeholder="Detailed submission specifications..."></textarea>
+                        <div class="error-message">Message details cannot be left blank.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Parameters</button>
+                    <div class="submit-alert" id="formAlert"></div>
+                </form>
             </div>
         </div>
-        <div class="footer-bottom-bar">
-            <div class="container bottom-flex">
-                <p>&copy; 2026 CostaVibe Global Infrastructure Ltd. All rights reserved.</p>
+    </section>
+
+    <footer class="footer-corporate">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-column">
+                    <h3>COSTAVIBE</h3>
+                    <p>Setting international infrastructure milestones for premium retail bean curation and sustainable farming partnerships.</p>
+                    <div class="social-matrix">
+                        <a href="#" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram Stream"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter Feed"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product Portfolio</h4>
+                    <a href="#menu">Roast Matrix</a>
+                    <a href="#menu">Allergen Registry</a>
+                    <a href="#">Caloric Indexes</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Enterprise Hub</h4>
+                    <a href="#">Franchise Management</a>
+                    <a href="#">Careers Portal</a>
+                    <a href="#">Press Office</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Compliance Protocols</h4>
+                    <a href="#">Privacy Architecture</a>
+                    <a href="#">Cookie Matrices</a>
+                    <a href="#">Modern Slavery Assertions</a>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <p>&copy; 2026 CostaVibe Enterprise Operations Infrastructure. All rights corporate reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Glassmorphic Window Scroll Tracking System ---
+            const headerElement = document.getElementById('dynamicHeader');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    headerElement.classList.add('scrolled');
+                } else {
+                    headerElement.classList.remove('scrolled');
+                }
+            });
+
+            // --- Mobile Sliding Drawer Management ---
             const mobileToggle = document.getElementById('mobileToggle');
             const navMenu = document.getElementById('navMenu');
 
             mobileToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
-                const icon = mobileToggle.querySelector('i');
+                const menuIcon = mobileToggle.querySelector('i');
                 if (navMenu.classList.contains('active')) {
-                    icon.className = 'fas fa-times';
+                    menuIcon.className = 'fas fa-times';
                 } else {
-                    icon.className = 'fas fa-bars';
+                    menuIcon.className = 'fas fa-bars';
                 }
             });
 
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
-                });
-            });
 
-            const filterChips = document.querySelectorAll('.filter-chip');
-            const productCards = document.querySelectorAll('.product-item-card');
+            // --- High-Performance Product Tab Sorting Pipeline ---
+            const tabTriggers = document.querySelectorAll('.tab-trigger');
+            const menuItemCards = document.querySelectorAll('.menu-item-card');
 
-            filterChips.forEach(chip => {
-                chip.addEventListener('click', () => {
-                    filterChips.forEach(c => c.classList.remove('active'));
-                    chip.classList.add('active');
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    tabTriggers.forEach(t => t.classList.remove('active'));
+                    trigger.classList.add('active');
 
-                    const selectedFilter = chip.getAttribute('data-filter');
+                    const targetedCategory = trigger.getAttribute('data-target');
 
-                    productCards.forEach(card => {
-                        const productGroup = card.getAttribute('data-group');
-                        if (productGroup === selectedFilter) {
+                    menuItemCards.forEach(card => {
+                        if (card.getAttribute('data-category') === targetedCategory) {
                             card.classList.remove('hidden');
                         } else {
                             card.classList.add('hidden');
                         }
                     });
                 });
+            });
+
+
+            // --- Enterprise Client-Side Data Form Validation System ---
+            const inquiryForm = document.getElementById('enterpriseForm');
+            
+            inquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                let structureIsValid = true;
+
+                // Elements Setup
+                const nameInput = document.getElementById('formName');
+                const emailInput = document.getElementById('formEmail');
+                const messageInput = document.getElementById('formMessage');
+
+                const nameGroup = document.getElementById('nameGroup');
+                const emailGroup = document.getElementById('emailGroup');
+                const messageGroup = document.getElementById('messageGroup');
+                const formAlert = document.getElementById('formAlert');
+
+                // Name Checking Rule
+                if (nameInput.value.trim().length < 2) {
+                    nameGroup.classList.add('invalid');
+                    structureIsValid = false;
+                } else {
+                    nameGroup.classList.remove('invalid');
+                }
+
+                // Email Pattern Regex Checking Rule
+                const validEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!validEmailRegex.test(emailInput.value.trim())) {
+                    emailGroup.classList.add('invalid');
+                    structureIsValid = false;
+                } else {
+                    emailGroup.classList.remove('invalid');
+                }
+
+                // Message Text Checking Rule
+                if (messageInput.value.trim().length === 0) {
+                    messageGroup.classList.add('invalid');
+                    structureIsValid = false;
+                } else {
+                    messageGroup.classList.remove('invalid');
+                }
+
+                // Execution Pipeline Output
+                if (structureIsValid) {
+                    formAlert.textContent = `Transmission verified. Welcome, ${nameInput.value.trim()}. Management records updated successfully.`;
+                    formAlert.className = "submit-alert success";
+                    
+                    // Reset fields safely
+                    inquiryForm.reset();
+                    
+                    // Fade validation message out after duration
+                    setTimeout(() => {
+                        formAlert.style.display = 'none';
+                    }, 5000);
+                }
             });
         });
     </script>
