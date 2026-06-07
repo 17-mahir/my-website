@@ -1,10 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Haven | Artisan Coffee & Pastries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-coffee"></i> Aroma Haven</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Roasted Fresh. Brewed Passionately.</h1>
+            <p>Step into a world of rich aromas, handcrafted specialty coffees, and freshly baked artisanal treats made daily with love.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="#contact" class="btn btn-secondary">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="subheading">Our Story</span>
+                    <h2>Where Every Cup Tells a Story</h2>
+                    <p>Founded in 2018, Aroma Haven started with a simple mission: to bring sustainably sourced, ethically roasted specialty coffee to our community. We partner directly with small-batch farmers to ensure premium quality.</p>
+                    <p>Whether you need a quiet corner to crush your remote work, a warm space to catch up with old friends, or just your morning espresso shot, we’ve built the perfect haven for you.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cozy cafe interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="subheading">Menu Favorites</span>
+                <h2>Crafted to Perfection</h2>
+            </div>
+            
+            <div class="tab-container">
+                <button class="tab-btn active" data-target="coffee">Coffee</button>
+                <button class="tab-btn" data-target="pastries">Pastries</button>
+                <button class="tab-btn" data-target="food">Light Bites</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-info">
+                        <h3>Vanilla Latte <span class="price">$4.50</span></h3>
+                        <p>Espresso, steamed milk, and organic house-made vanilla bean syrup.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-info">
+                        <h3>Cold Brew Nitro <span class="price">$5.00</span></h3>
+                        <p>Infused with nitrogen for a rich, creamy head and ultra-smooth taste.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-info">
+                        <h3>Caramel Macchiato <span class="price">$4.75</span></h3>
+                        <p>Drizzled with buttery caramel over velvety steamed milk and espresso.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-info">
+                        <h3>Almond Croissant <span class="price">$3.75</span></h3>
+                        <p>Flaky, buttery pastry filled with sweet almond frangipane cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-info">
+                        <h3>Blueberry Scone <span class="price">$3.50</span></h3>
+                        <p>Soft, crumbly British-style scone packed with fresh wild blueberries.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="food">
+                    <div class="menu-item-info">
+                        <h3>Avocado Sourdough Toast <span class="price">$8.50</span></h3>
+                        <p>Crushed avocado, cherry tomatoes, feta cheese, and microgreens.</p>
+                    </div>
+                </div>
+                <div class="menu-item hidden" data-category="food">
+                    <div class="menu-item-info">
+                        <h3>Caprese Panini <span class="price">$9.00</span></h3>
+                        <p>Fresh mozzarella, vine tomatoes, basil pesto, pressed on ciabatta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="testimonial-slide active">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Hands down the best cold brew in the city. The staff actually knows their beans, and the atmosphere makes it incredibly easy to focus on work."</p>
+                    <h4>— Sarah K.</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Their almond croissants are to die for! Crispy on the outside, soft on the inside. I come here every Saturday morning without fail."</p>
+                    <h4>— David L.</h4>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Visit the Haven</h2>
+                    <p>We are conveniently located in the downtown arts district. Drop by or reach out for catering events.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Bean Street, Brewtown, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@aromahaven.com</li>
+                    </ul>
+                    <h3>Hours of Operation</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span> <span>6:00 AM - 7:00 PM</span></li>
+                        <li><span>Saturday</span> <span>7:00 AM - 8:00 PM</span></li>
+                        <li><span>Sunday</span> <span>8:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Drop Us a Line</h3>
+                    <form id="cafeForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message or Reservation Details..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    <div id="formFeedback" class="form-feedback hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Aroma Haven. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
